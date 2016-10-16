@@ -1,0 +1,104 @@
+###1请写出Java语言的11个特点。
+Java语言是简单的，面向对象的，分布式的，健壮的，安全的，
+体系结构中立的，可移植的，解释型的，高性能的，多线程的，动态的。
+
+###2 JVM是怎样的一种机制，Java程序如何运行？
+JVM工作原理和特点主要是指操作系统装入JVM是通过jdk中Java.exe来完成,
+通过下面4步来完成JVM环境. 
+1.创建JVM装载环境和配置 
+2.装载JVM.dll 
+3.初始化JVM.dll并挂界到JNIENV(JNI调用接口)实例 
+4.调用JNIEnv实例装载并处理class类。
+Java代码编译是由Java源码编译器来完成，Java字节码的执行是由JVM执
+行引擎来完成。
+
+
+###3列出30个Java网站网址
+www.apache.org
+Stackoverflow.com
+http://www.dzone.com
+ http://docs.oracle.com/javase/
+https://github.com/
+http://www.javaworld.com/
+http://www.ibm.com/developerworks/java/
+www.csdn.net
+www.javaresearch.org
+www.java-cn.com
+www.javajia.com  
+www.javaeye.com  
+www.javazy.com  
+www.javatx.cn  
+www.javayou.com
+www.jdon.com  
+www.javablogs.com  
+www.javarss.com.cn  
+www.javasalon.net
+www.java3z.com  
+www.javaunion.org  
+www.javadict.com  
+forum.javaeye.com
+www.cnjavaclub.com  
+www.huihoo.com  
+www.jar.com.cn  
+www.cjsdn.com
+www.chinajavasky.com  
+www.ojava.cn  
+www.chinaitlab.com  
+java.matrix.org.cn  
+www.chinajavaworld.com  
+www.open-open.com  
+www.xuejava.com  
+www.studyjava.com
+
+###4列出10中开发Java程序的软件名称及版本。
+JDK6.0+Notepad
+BlueJ3.11  
+Eclipse4.2  
+Netbeans7.2  
+JBuilder2006
+H2SQL1.0  
+Jakarta 
+Tomcat8.0  
+IntelliJ7.0  
+NetBeans8.0  
+JDeveloper9.0
+
+
+###5..如何安装JDK软件、JRE软件和配置环境？
+####a.
+安装JDK选择安装目录，安装过程中会出现两次安装提示，第一次是安
+装jdk，第二次是安装jre，建议两个都安装在同一个java文件夹中的不同文件
+夹中（不能都安装在java文件夹的根目录下，jdk和jre安装在同一文件夹会出错）
+####b.
+安装完JDK后配置环境变量 计算机→属性→高级系统设置→高级→环境变量
+系统变量→新建JAVA_HOME 变量。变量值填写jdk的安装目录。
+系统变量→寻找 Path 变量→编辑  
+在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+变量值填写 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+
+
+###6.如何安装和使用BlueJ软件？
+安装BlueJ之前，你必须在你的系统上安装了JDK1.2.2或更高的版本。
+双击安装文件(bluej-xxx.jar)
+如果你的系统没有配置执行jar文件，那么双击可能会不起作用。在这种情况下，
+请打开一个DOS窗口并参考下面的UNIX安装方法
+Unix：
+使用下面的命令运行安装程序。
+<jdk-path>/bin/java –jar bluej-xxx.jar
+<jdk-path>是JDK安装的目录
+接着会出现一个窗口，让你选择Blue的安装目录和JDK的版本用来运行BlueJ。
+注意：BlueJ的安装路径中不能有任何空格（比如：“Program files”）！
+单击 Install, 完成之后，BlueJ就装完了。
+
+###7.Java程序基本结构是怎样的？请写出Java的“Hello World”程序。
+package xxx;//包
+      public class xxx{   //类
+         //语句
+}      
+package package1;
+public class class1 {
+	 public static void main(String[] args) {
+		    System.out.println("Hello World!");
+		    }
+}
+      
