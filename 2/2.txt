@@ -1,0 +1,132 @@
+###1.请说明Scanner类如何使用？
+1、Scanner是SDK1.5新增的一个类,可是使用该类创建一个对象.
+Scanner reader=new Scanner(System.in);　　
+2、reader对象调用下列方法(函数),读取用户在命令行输入的各种数据类型:next.Byte(),nextDouble(),nextFloat,nextInt(),nextLine(),nextLong(),nextShot()上述方法执行时都会造成堵塞,等待用户在命令行输入数据回车确认.
+3、例如,拥护在键盘输入12.34,hasNextFloat()的值是true,而hasNextInt()的值是false. NextLine()等待用户输入一个文本行并且回车,该方法得到一个String类型的数据。
+
+###2.请说明System.out.printf函数如何使用？
+double d = 345.678;  
+String s = "你好！";  
+int i = 1234;   
+System.out.printf("%f", d);// "f"表示格式化输出浮点数。  
+System.out.println();  
+System.out.printf("%9.2f", d);// "9.2"中的9表示输出的长度，2表示小数点后的位数。  
+System.out.println();  
+System.out.printf("%+9.2f", d);// "+"表示输出的数带正负号。  
+System.out.println();  
+System.out.printf("%-9.4f", d);// "-"表示输出的数左对齐（默认为右对齐）。  
+System.out.println();  
+System.out.printf("%+-9.3f", d);// "+-"表示输出的数带正负号且左对齐。  
+System.out.println();  
+System.out.printf("%d", i);// "d"表示输出十进制整数。  
+System.out.println();  
+System.out.printf("%o", i);// "o"表示输出八进制整数。  
+System.out.println();  
+System.out.printf("%x", i);// "d"表示输出十六进制整数。  
+System.out.println();  
+System.out.printf("%#x", i);// "d"表示输出带有十六进制标志的整数。  
+System.out.println();  
+System.out.printf("%s", s);// "d"表示输出字符串。  
+System.out.println();  
+System.out.printf("输出一个浮点数：%f，一个整数：%d，一个字符串：%s", d, i, s);  
+System.out.println();  
+System.out.printf("字符串：%2$s，%1$d的十六进制数：%1$#x", i, s);  
+
+
+###3.请写出if、if-else和switch-case三种分支结构的格式。
+if(布尔表达式)
+{
+   //如果布尔表达式为true将执行的语句
+}
+
+if(布尔表达式){
+   //如果布尔表达式的值为true
+}else{
+   //如果布尔表达式的值为false
+}
+
+if(布尔表达式 1){
+   //如果布尔表达式 1的值为true执行代码
+}else if(布尔表达式 2){
+   //如果布尔表达式 2的值为true执行代码
+}else if(布尔表达式 3){
+   //如果布尔表达式 3的值为true执行代码
+}else {
+   //如果以上布尔表达式都不为true执行代码
+}
+
+switch(expression){
+    case value :
+       //语句
+       break; //可选
+    case value :
+       //语句
+       break; //可选
+    //你可以有任意数量的case语句
+    default : //可选
+       //语句
+}
+
+
+###4.请写出while、do-while和for三种循环结构的格式。
+while(Boolean_expression)
+{
+   //Statements
+}
+
+do
+{
+   //Statements
+}while(Boolean_expression);
+
+for(initialization; Boolean_expression; update)
+{
+   //Statements
+}
+
+
+###5.请写出try-catch-finally异常结构的格式。
+
+try{
+抛异常的语句
+}catch（捕获异常）{
+打印堆栈
+}
+finally{
+一般是释放资源, finally里面的语句不管catch执行不执行都会走的
+} 
+
+
+###6.类的修饰符有哪些，各有何作用?
+public 权限最大，公共类，其他类都可使用它
+abstract 抽象类，不能直接定义对象
+final 不能有子类
+strictfp 浮点限制
+Annotation 断言，用于调试
+无类修饰符，friendly，同一个包中的类可以使用该类
+
+
+###7.类的成员变量和成员函数修饰符各有哪些，各有何作用?
+成员变量
+public 权限最大，公共类，其他类都可使用它
+protect 子类继承使用
+private 类内部使用
+static 静态，只分配一次存储，是整个类的属性，
+final 常量
+transient 暂态
+volatile 共享
+annotation 断言
+无变量修饰符，同一个包中的类可使用它
+
+成员方法
+public 权限最大，公共类，其他类都可使用它
+protect 子类继承使用
+private 类内部使用
+static 静态，直接通过类就可使用
+final 不可在子类中覆盖
+native 本地方法
+abstract 抽象方法
+synchronized 同步
+strictfp 浮点限制
+annotation 断言
+throws 异常类列表为该方法抛出相关异常对象
