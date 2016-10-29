@@ -1,0 +1,149 @@
+###1 Java中的一维、二维数组是如何定义和初始化的？
+####一维数组
+int a[]; //声明未初始化  
+a = new int [10]; // 定义占用空间大小（10个int）  
+int a[] = new int [10]; //声明并定义大小（即分配了指定大小的空间）  
+int len=10; float score[] = new float[len];
+int a[] = {1,2,3}; // 声明并初始化，占用空间大小是3个int。  
+byte[] a,b,c[];
+
+
+####二维数组  
+float[][] a
+a=float[5][5]; 
+int[] ai[];
+int [][]ai;
+long[][] numfive=new long[5][]; 
+初始化：
+double[][] numsix={{1.111D,2.222D,3.333D},{4.444D,5.555D,6.666D}};
+int[][] numseven=new int[][]{{10,20,30},{40,50},{60}};
+
+###2. Java中的整数、字符数组、字符串之间如何转换？
+#### 整数、字符串
+int i = Integer.parseInt(str); 
+int i = Integer.valueOf(my_str).intValue(); 
+
+String s = String.valueOf(i); 
+String s = Integer.toString(i); 
+String s = "" + i; 
+
+#### 字符数组、字符串
+char[] data = {'a', 'b', 'c'};
+String str = new String(data);
+
+String.toCharArray();
+
+#### 字符数组与整型通过上面的操作间接转换
+
+
+###3. 日期类Calendar和动态数组类ArrayList各有哪些主要方法？
+####日期类Calendar
+static int AM_PM 上午下午
+static int ERA 公元后公元前
+初始化一个日历对象:Calendar now = Calendar.getInstance();
+
+把日历定到一个时间：
+set(int year ,int month,int date)
+set(int year ,int month,int date,int hour,int minute)
+set(int year ,int month,int date,int hour,int minute,int second)
+setTimeInMillis(long millis)
+
+获得年份、月份、小时等信息可以使用：
+Now.get(Calendar.Month);这样的方法 0表示一月，1表示二月
+get(Calendar.DAY_OF_MONTH)获得这个月的第几天
+get(Calendar.DAY_OF_WEEK)获得这个星期的第几天
+get(Calendar.DAY_OF_YEAR)获得这个年的第几天
+getTimeMillis()
+getTime()
+
+after(Object when) 
+before(Object when)
+getGreatestMinimum，
+getLeastMaximum
+setTimeZone(TimeZone value)
+toString()
+
+####动态数组类ArrayList
+构造方法
+ArrayList(int capacity) 构造一个具有指定初始容量的空列表。
+ArrayList() 构造一个初始容量为 0 的空列表。
+ArrayList(Collection<? extends E> collection)
+
+add(E object)
+将指定的元素添加到此列表的尾部。
+add(int index, E object)
+ 将指定的元素插入此列表中的指定位置
+addAll(Collection<? extends E> collection)
+Adds the objects in the specified collection to this ArrayList.
+addAll(int index, Collection<? extends E> collection)
+从指定的位置开始，将指定 collection 中的所有元素插入到此列表中。
+clear()
+移除此列表中的所有元素。
+contains(Object object)
+如果此列表中包含指定的元素，则返回 true。
+ensureCapacity(int minimumCapacity)
+如有必要，增加此 ArrayList 实例的容量，以确保它至少能够容纳最小容量参数所指定的元素数。
+get(int index)
+返回此列表中指定位置上的元素。
+isEmpty()
+Returns if this Collection contains no elements.
+remove(int index)
+移除此列表中指定位置上的元素。
+remove(Object object)
+移除此列表中首次出现的指定元素（如果存在）。
+set(int index, E object)
+用指定的元素替代此列表中指定位置上的元素。
+size()
+返回此列表中的元素数。
+trimToSize()
+将此 ArrayList 实例的容量调整为列表的当前大小。
+
+
+###4. Map和Collection两个类各是干什么的？有什么区别？ 
+Collection Collection中存储了一组对象
+ 有 list，set
+-List： 将以特定次序存储元素。 ArrayList ，LinkedList，Vector
+-Set ： 不能含有重复的元素， HashSet，TreeSet
+
+Map存储关键字/值对。
+有 HashMap ，HashTable，TreeMap
+
+List，Set，Map 将持有对象一律视为Object。
+Collection、List、Set、Map都是接口，不能实例化。
+ArrayList, Vector, HashTable, HashMap是class，可实例化。
+vector容器确切知道它所持有的对象隶属什么型别
+vector不进行边界检查。
+
+
+###5. Stack、Random和Dictionary三个类各是干什么的？
+Stack 线性结构。数据元素按照逻辑顺序依次存放一组连续的物理存储单元之中。只能从一侧添加删除，先进先出。
+Random 生成伪随机数流
+Dictionary 是一个抽象类，用来存储键/值对，作用和Map类相似。给出键和值，你就可以将值存储在Dictionary对象中。一旦该值被存储，就可以通过它的键来获取它。所以和Map一样， Dictionary 也可以作为一个键/值对列表。
+
+
+###6. 举例说明Set和SortedSet有何区别？
+Set(集)：集合中的对象无排列顺序,并且没有重复的对象.
+
+                  Set set = new HashSet();
+                  set.add("aaa");
+                  set.add("bbb");
+                  set.add("aaa");//后面加入的重复性元素均无效
+                  set.add("bbb");
+                  set.add("aaa");
+                  set.add("bbb");
+                  set.add("aaa");
+                  set.add("bbb");
+                  set.add("aaa");
+                  set.add("bbb");
+                  System.out.println(set.size());// 2
+
+SortedSet是个接口，它里面的（只有TreeSet这一个实现可用）中的元素一定是有序的。
+
+        SortedSet<String> allSet = new TreeSet<String>();
+        allSet.add("Z");  
+        allSet.add("B");  
+        allSet.add("C");  
+        allSet.add("D");  
+        allSet.add("E");  
+        System.out.println("第一个元素："+allSet.first());//第一个元素：B
+        System.out.println("最后一个元素"+allSet.last());  //最后一个元素Z
