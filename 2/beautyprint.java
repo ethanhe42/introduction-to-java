@@ -2,21 +2,24 @@ import java.util.Scanner;
 
 public class beautyprint {
 	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		System.out.print("ÇëÊäÈëÒ»¸öÊı£º");
-		int n = sc.nextInt();
-		int former = n/2;
-		for (int i=0;i<former;i++){
-			String s="";
-			s+=repeat(" ", (former-i-1)*2)+repeat(" "+(i+1), 2*i+1);
-			System.out.println(s);
+		while(true){
+			Scanner sc = new Scanner(System.in);
+			System.out.print("nï¼š");
+			int n = sc.nextInt();
+			int former = (n+1)/2;
+			for (int i=0;i<former;i++){
+				String s="";
+				s+=repeat(" ", (former-i-1)*2)+repeat(" "+(i+1), 2*i+1);
+				System.out.println(s);
+			}
+			int last = n-(int)(n/2);
+			for (int i=0;i<last;i++){
+				String s="";
+				s+=repeat("  ", i) + repeat((former+i+1)+" ", 2*(last-i));
+				System.out.println(s);
+			}
 		}
-		int last = n-former;
-		for (int i=0;i<last;i++){
-			String s="";
-			s+=repeat("  ", i) + repeat((former+i+1)+" ", 2*(last-i));
-			System.out.println(s);
-		}
+
 	}
 	public static String repeat(String a, int n){
 		String ret = "";
