@@ -26,10 +26,10 @@ public class set {
 				v.remove(sc.nextInt());
 			}
 			else if(operation==3){
-				System.out.printf("修改第几个元素：");
-				int i=sc.nextInt();
-				System.out.printf("修改成：");
-				v.setElementAt(sc.nextInt(),i);
+				System.out.printf("修改第几个元素, 为几, 以空格分开");
+				int a = sc.nextInt();
+				int b = sc.nextInt();
+				v.setElementAt(b,a);
 			}
 			else if(operation==4){
 				System.out.printf("查找的元素：");
