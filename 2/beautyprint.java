@@ -12,10 +12,10 @@ public class beautyprint {
 				s+=repeat(" ", (former-i-1)*2)+repeat(" "+(i+1), 2*i+1);
 				System.out.println(s);
 			}
-			int last = n-(int)(n/2);
+			int last = n-(int)((n+1)/2);
 			for (int i=0;i<last;i++){
 				String s="";
-				s+=repeat("  ", i) + repeat((former+i+1)+" ", 2*(last-i));
+				s+=repeat("  ", i+n%2) + repeat((former+i+1)+" ", 2*(last-i));
 				System.out.println(s);
 			}
 		}
