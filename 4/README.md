@@ -54,6 +54,31 @@ abstract class ac implements i{
 一个程序至少有一个进程,一个进程至少有一个线程. 普通程序是单线程的，一个一个语句执行。而线程开了之后，几个线程是可以平行工作的。
 
 ### 6. 什么是文件输入输出流？
+文件输入与输出以流的形式进行，同时根据内容不同分为字节和字符两种 字节流的读取与写入
+读取步骤：File→FileInputStream→f.read(bytes) 写入步骤：File→FileOutputStream→f.write(bytes)
+字符的读取和写入 
+文件字符流：FileReader→f.read(c);  FileReader→BufferedReader→f.readLine();  File→FileReader→BufferedReader→reader.readLine();
 ### 7. 什么是字节输入输出流、字符输入输出流？
+##### 字节输入输出流
+字节和二进制文件用字节类
+字节流中的两个顶层类为：InputStream(输入字节流）和OutputStream(输出字节流）， 其下有两个子类FileInputStream(文件输入流），FileOutputStream(文件输出流）。
+##### 字符输入输出流
+处理字符和字符串用字符流类， 字符流层主要有Reader和Writer两个顶层的抽象类，其中有两个字类，即FileReader和FileWriter类。
+
 ### 8. 什么是结点输入输出流、过滤输入输出流？
+- 节点流用于直接操作目标设备的流， 
+- 过滤流是对一个已存在的流的链接和封装，通过对数据进行处理为程序提供功能强大、灵活的读写功能。
+
 ### 9. 读文本文件的常用类和方法有哪些？写文本文件的常用类和方法有哪些？
+##### 读取
+- FileInputStream， 以字节为单位的流处理。 Read（），read（byte[] b），read（byte[],int off,int len）,available();
+- FileReader， read
+- BufferedReader， readLine
+- InputStreamReader，  getEncoding()，read(); 
+
+##### 写文件
+- FileWriter， write， 追加内容：new FileWriter(fileName,true);
+- BufferedWriter， write
+- FileOutputStream, write
+- OutputStreamWriter, write
+
