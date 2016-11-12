@@ -5,22 +5,17 @@ Window, Panel ,Applet, Frame, Dialog,ScrollPane
 BorderLayout， BoxLayout， CardLayout，FlowLayout，GridBagLayout，GridLayout， GroupLayout，SpringLayout
 
 ### 3.AWT有哪些组件？
-类java.awt.Component是许多组件类的父类，Component类中封装了组件通用的方法和属性，如图
+类java.awt.Component是许多组件类的父类，Component类中封装了组件通用的方法和属性.
 
-形的组件对象、大小、显示位置、前景色和背景色、边界、可见性等，因此许多组件类也就继承
-
-了Component类的成员方法和成员变量，相应的成员方法包括：
-　　　getComponentAt(int x, int y)
-　　　getFont()
-　　　getForeground()
-　　　getName()
-　　　getSize()
-　　　paint(Graphics g)
-　　　repaint()
-　　　update()
-　　　setVisible(boolean b)
-　　　setSize(Dimension d)
-　　　setName(String name)等
+- 标签Label
+- 按钮Button 
+- 文本框 TextField 
+- 文本区TextArea 
+- 复选框Checkbox 
+- 下拉列表Choice 
+- 列表List 
+- 滚动条Scrollbar 
+- 滚动面板ScrollPane
 
 ### 4.AWT的窗口事件、键盘事件和鼠标事件各是什么？
 WindowEvent：“窗口事件”，点击关闭按钮，窗口得到与失去焦点，窗口最小化等。
