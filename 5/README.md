@@ -1,15 +1,8 @@
-###1. AWT有哪些容器？
-Window类,Panel类,Applet类,Frame,Dialog,ScrollPane
+### 1. AWT有哪些容器？
+Window, Panel ,Applet, Frame, Dialog,ScrollPane
 
 ### 2.AWT有哪些布局？
-BorderLayout边框布局；
-BoxLayout布局；
-CardLayout卡片布局；
-FlowLayout流动布局；
-GridBagLayout网格包布局；
-GridLayout网格布局；
-GroupLayout布局；
-SpringLayout布局；
+BorderLayout， BoxLayout， CardLayout，FlowLayout，GridBagLayout，GridLayout， GroupLayout，SpringLayout
 
 ### 3.AWT有哪些组件？
 类java.awt.Component是许多组件类的父类，Component类中封装了组件通用的方法和属性，如图
