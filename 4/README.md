@@ -54,10 +54,11 @@ abstract class ac implements i{
 一个程序至少有一个进程,一个进程至少有一个线程. 普通程序是单线程的，一个一个语句执行。而线程开了之后，几个线程是可以平行工作的。
 
 ### 6. 什么是文件输入输出流？
-文件输入与输出以流的形式进行，同时根据内容不同分为字节和字符两种 字节流的读取与写入
-读取步骤：File→FileInputStream→f.read(bytes) 写入步骤：File→FileOutputStream→f.write(bytes)
-字符的读取和写入 
-文件字符流：FileReader→f.read(c);  FileReader→BufferedReader→f.readLine();  File→FileReader→BufferedReader→reader.readLine();
+文件输入与输出以流的形式进行，同时根据内容不同分为字节和字符两种 
+
+字节流的读取与写入，读取步骤：File→FileInputStream→f.read(bytes) 写入步骤：File→FileOutputStream→f.write(bytes)
+
+字符的读取和写入， 文件字符流：FileReader→f.read(c);  FileReader→BufferedReader→f.readLine();  File→FileReader→BufferedReader→reader.readLine();
 ### 7. 什么是字节输入输出流、字符输入输出流？
 ##### 字节输入输出流
 字节和二进制文件用字节类
