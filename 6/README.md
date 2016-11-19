@@ -24,7 +24,9 @@ REVOKE system_priv FROM user -- 回收权限
 ```
 ### 3.请简单描述JApplet类的设计方法和标准函数。
 Applet小程序运行之前先产生对象，蚺后进入生命周期，这期间主要设计applet类或Japplet子类的init，start，stop，destory。start一般运行多次。当所在的浏览器转入其他页面，立刻执行stop。重新激活时，又调用start。浏览器关闭时，调用destory。
+
 Applet 即是组件，又是容器，默认为flowlayout，可以完成图像，声音，动画等功能。JApplet的内容窗格使用BorderLayout。
+
 JApplet标准函数：
 - Applet() // 创建对象
 - init（） //初始化
@@ -52,17 +54,17 @@ JApplet标准函数：
          // 获取与此 JApplet 关联的 AccessibleContext。
 - Container	getContentPane() 
          // 返回此 applet 的 contentPane 对象。
- Component	getGlassPane() 
+- Component	getGlassPane() 
         //  返回此 applet 的 glassPane 对象。
- Graphics	getGraphics() 
+- Graphics	getGraphics() 
          // 为组件创建一个图形上下文。
- JMenuBar	getJMenuBar() 
+- JMenuBar	getJMenuBar() 
         //  返回此 applet 上的菜单栏设置。
- JLayeredPane	getLayeredPane() 
+- JLayeredPane	getLayeredPane() 
          // 返回此 applet 的 layeredPane 对象。
- JRootPane	getRootPane() 
+- JRootPane	getRootPane() 
          // 返回此 applet 的 rootPane 对象。
- TransferHandler	getTransferHandler() 
+- TransferHandler	getTransferHandler() 
           //获取 transferHandler 属性。
 - protected  boolean	isRootPaneCheckingEnabled() 
           //返回是否将对 add 和 setLayout 的调用转发给 contentPane。
